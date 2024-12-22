@@ -1,6 +1,9 @@
 package security
 
 import (
+	"encoding/json"
+	"fmt"
+	"log"
 	"slices"
 	"strings"
 
@@ -52,6 +55,12 @@ func (t TokenConfig) Secure(roles ...string) fiber.Handler {
 		})
 
 		if err != nil || !token.Valid {
+			jsonBytes, err := json.Marshal(err)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			fmt.Println(string(jsonBytes))
+
 			invalidTokenError := response.NewRestResponseError(c, response.ResponseError{
 				Code:    codes.AUTH_ERROR,
 				Message: "Invalid or expired token",
@@ -69,6 +78,12 @@ func (t TokenConfig) Secure(roles ...string) fiber.Handler {
 		}
 
 		if len(roles) > 0 {
+			jsonBytes, err := json.Marshal(roles)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			fmt.Println(string(jsonBytes))
+
 			if ok := hasRole(claims.Permission, roles); !ok {
 				invalidTokenError := response.NewRestResponseError(c, response.ResponseError{
 					Code:    codes.AUTH_ERROR,
