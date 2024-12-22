@@ -1,4 +1,4 @@
-module go-microservice-lib
+module github.com/faozimipa/go-microservice-lib
 
 go 1.23.2
 

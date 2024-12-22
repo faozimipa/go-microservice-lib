@@ -1,8 +1,8 @@
 package response
 
 import (
-	"go-microservice-lib/response/codes"
-	"go-microservice-lib/tracing"
+	"github.com/faozimipa/go-microservice-lib/response/codes"
+	"github.com/faozimipa/go-microservice-lib/tracing"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/log"

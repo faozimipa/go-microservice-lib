@@ -7,9 +7,9 @@ import (
 	"slices"
 	"strings"
 
-	"go-microservice-lib/response"
-	"go-microservice-lib/response/codes"
-	"go-microservice-lib/tracing"
+	"github.com/faozimipa/go-microservice-lib/response"
+	"github.com/faozimipa/go-microservice-lib/response/codes"
+	"github.com/faozimipa/go-microservice-lib/tracing"
 
 	"github.com/Nerzal/gocloak/v13"
 	"github.com/gofiber/fiber/v2"
