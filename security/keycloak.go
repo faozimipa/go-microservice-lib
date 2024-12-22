@@ -7,13 +7,14 @@ import (
 	"slices"
 	"strings"
 
+	"go-microservice-lib/response"
+	"go-microservice-lib/response/codes"
+	"go-microservice-lib/tracing"
+
 	"github.com/Nerzal/gocloak/v13"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/log"
 	"github.com/golang-jwt/jwt"
-	"github.com/javiorfo/go-microservice-lib/response"
-	"github.com/javiorfo/go-microservice-lib/response/codes"
-	"github.com/javiorfo/go-microservice-lib/tracing"
 	"github.com/javiorfo/steams"
 )
 

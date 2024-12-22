@@ -1,4 +1,4 @@
-module github.com/javiorfo/go-microservice-lib
+module go-microservice-lib
 
 go 1.23.2
 

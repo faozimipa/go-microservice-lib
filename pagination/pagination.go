@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/javiorfo/go-microservice-lib/response"
+	"go-microservice-lib/response"
 )
 
 type Page struct {

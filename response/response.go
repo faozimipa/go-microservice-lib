@@ -1,10 +1,11 @@
 package response
 
 import (
+	"go-microservice-lib/response/codes"
+	"go-microservice-lib/tracing"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/log"
-	"github.com/javiorfo/go-microservice-lib/response/codes"
-	"github.com/javiorfo/go-microservice-lib/tracing"
 )
 
 // ResponseError represents an error
